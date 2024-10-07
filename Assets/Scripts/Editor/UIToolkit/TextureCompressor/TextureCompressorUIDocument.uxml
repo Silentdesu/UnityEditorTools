@@ -1,0 +1,35 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="root" class="root" style="flex-grow: 1; justify-content: space-around; align-self: auto; align-items: center;">
+        <ui:VisualElement name="header" style="flex-grow: 0; flex-direction: column; justify-content: center; align-items: center; align-self: center; flex-wrap: nowrap; flex-shrink: 0; width: 80%; height: auto; position: relative; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+            <ui:VisualElement name="elements" style="flex-grow: 1; flex-direction: row; align-items: stretch; justify-content: space-between; align-self: auto; width: 100%; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;">
+                <ui:Label tabindex="-1" text="Folder path" parse-escape-sequences="true" display-tooltip-when-elided="true" name="text" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; -unity-text-align: middle-center;" />
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="copy-path-button" text="Copy path*" class="button" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 10px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; width: 60px; height: 20px;" />
+            </ui:VisualElement>
+            <ui:TextField picking-mode="Ignore" name="folder-path-text-field" password="false" readonly="true" style="-unity-text-align: middle-center; width: 100%; flex-grow: 0; white-space: nowrap; height: auto; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="body" style="flex-grow: 0; justify-content: center;">
+            <ui:VisualElement name="container-top" style="flex-grow: 1; align-items: center;">
+                <ui:VisualElement name="buttons" style="flex-grow: 0; flex-direction: row-reverse; flex-shrink: 0; width: 80%;">
+                    <ui:Button text="N*" parse-escape-sequences="true" display-tooltip-when-elided="true" name="normal-map-button" style="width: 25px; height: 25px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 5px; margin-bottom: 0; margin-left: 5px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;" />
+                    <ui:Button text="D*" parse-escape-sequences="true" display-tooltip-when-elided="true" name="diffuse-map-button" style="width: 25px; height: 25px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 5px; margin-bottom: 0; margin-left: 5px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;" />
+                </ui:VisualElement>
+                <ui:ListView focusable="true" name="textures-list-view" style="flex-shrink: 0; max-height: none; min-height: auto; width: 80%; height: 150px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="container-bottom" style="flex-grow: 1; flex-direction: row; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; width: 100%; height: auto; align-self: auto;">
+                <ui:VisualElement name="left-panel" style="flex-grow: 1; align-items: flex-start; justify-content: space-between; font-size: 10px; align-self: center; flex-shrink: 1; -unity-font-style: bold; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                    <ui:Toggle label="Generate mipmaps" name="generate-mipmaps-toggle" value="true" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;" />
+                    <ui:Toggle label="Mip Streaming" name="mip-streaming-toggle" value="true" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;" />
+                    <ui:DropdownField label="Max Size" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="max-size-dropdown" style="align-self: auto; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;" />
+                    <ui:DropdownField label="Compression" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="compression-dropdown" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;" />
+                    <ui:Toggle label="Use Crunch Compression" name="use-crunch-compression-toggle" value="true" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="right-panel" style="flex-grow: 0; flex-shrink: 0; justify-content: center;">
+                    <ui:IMGUIContainer name="texture-imgui" style="width: 128px; height: 128px; background-image: none; align-self: auto; justify-content: center; align-items: center;">
+                        <ui:Label tabindex="-1" text="Select texture" parse-escape-sequences="true" display-tooltip-when-elided="true" name="texture-label" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 8px;" />
+                    </ui:IMGUIContainer>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button text="Apply" parse-escape-sequences="true" display-tooltip-when-elided="true" name="apply-button" class="button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; width: 60px; height: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+    </ui:VisualElement>
+</ui:UXML>
